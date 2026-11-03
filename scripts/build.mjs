@@ -1,7 +1,11 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { icon } from './icons.mjs';
 
 const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
+for (const award of profile.awards) {
+  const months = { Enero: 'Ene', Febrero: 'Feb', Marzo: 'Mar', Abril: 'Abr', Mayo: 'May', Junio: 'Jun', Julio: 'Jul', Agosto: 'Ago', Septiembre: 'Sep', Octubre: 'Oct', Noviembre: 'Nov', Diciembre: 'Dic' };
+  award.date = award.date.replace(/\b(Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre)\b/g, month => months[month]);
+}
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 let html = readFileSync('templates/index.html', 'utf8');
 const sections = [];
@@ -27,4 +31,7 @@ html = html.replaceAll('{{NAME}}', escape(profile.name)).replaceAll('{{HEADLINE}
 sections.push(section('reconocimientos', 'Reconocimientos', profile.awards.map(award => `<article class="award ${award.featured ? '' : 'web-only'}"><h3>${escape(award.name)}</h3><p class="meta">${escape(award.date)}</p><div class="web-only"><p>${escape(award.organization)}. ${escape(award.detail)}</p>${external(award.url, 'Verificar')}</div></article>`).join('')));
 sections.splice(sections.length - 1, 0, section('habilidades', 'Habilidades', Object.entries(profile.skills).flatMap(([level, rows]) => rows.map(row => `<p><strong>${escape(level)}:</strong> ${escape(row)}</p>`)).join('')));
 html = html.replace('{{CONTENT}}', sections.join('\n'));
+const documents = readdirSync('Certificados', { recursive: true }).filter(file => file.endsWith('.pdf'));
+const catalog = `<details class="web-only"><summary>Archivo documental completo (${documents.length} PDF)</summary><p>Documentos originales; algunos nombres todavía requieren identificación.</p><ul>${documents.map(file => `<li>${external('Certificados/' + file.replaceAll('\\', '/').split('/').map(encodeURIComponent).join('/'), file.split(/[\\/]/).pop())}</li>`).join('')}</ul></details>`;
+html = html.replace('</main>', `${catalog}</main>`);
 writeFileSync('index.html', html);
