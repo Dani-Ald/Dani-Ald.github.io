@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
+import { icon } from './icons.mjs';
 
 const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -12,6 +13,7 @@ const links = [
   ['github', contact.github, contact.github.replace('https://', '')],
   ['globe', contact.website, contact.website.replace('https://', '').replace(/\/$/, '')]
 ];
-html = html.replace('{{CONTACT}}', links.map(([icon, href, label]) => `<a href="${escape(href)}">${escape(label)}</a>`).join('\n'));
+html = html.replace('{{CONTACT}}', links.map(([symbol, href, label]) => `<a href="${escape(href)}">${icon(symbol)}${escape(label)}</a>`).join('\n'));
+html = html.replace('{{CITY}}', `${icon('pin')}${escape(contact.city)}`);
 html = html.replaceAll('{{NAME}}', escape(profile.name)).replaceAll('{{HEADLINE}}', escape(profile.headline)).replaceAll('{{CITY}}', escape(contact.city));
 writeFileSync('index.html', html);
