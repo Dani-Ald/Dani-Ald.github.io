@@ -12,6 +12,7 @@ const entries = items => items.map(item => `<article><h3>${escape(item.name)}</h
 sections.push(section('proyectos', 'Proyectos', entries(profile.projects)));
 sections.push(section('experiencia', 'Experiencia', entries(profile.experience)));
 sections.push(section('educacion', 'Educación', profile.education.map(text => `<p>${escape(text)}</p>`).join('')));
+sections.push(section('certificaciones', 'Certificaciones', profile.certifications.map(cert => `<article class="credential ${cert.featured ? '' : 'web-only'}"><h3>${escape(cert.name)}</h3><p class="meta">${escape(cert.issuer)} · ${escape(cert.date)}</p><div class="web-only">${cert.id ? `<p>ID: ${escape(cert.id)}</p>` : ''}${external(cert.url, 'Verificar')}</div></article>`).join('')));
 const contact = profile.contact;
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
