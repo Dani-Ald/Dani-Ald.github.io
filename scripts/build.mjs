@@ -18,6 +18,8 @@ sections.push(section('experiencia', 'Experiencia', entries(profile.experience))
 sections.push(section('educacion', 'Educación', profile.education.map(text => `<p>${escape(text)}</p>`).join('')));
 sections.push(section('certificaciones', 'Certificaciones', profile.certifications.map(cert => `<article class="credential ${cert.featured ? '' : 'web-only'}"><h3>${escape(cert.name)}</h3><p class="meta">${escape(cert.issuer)} · ${escape(cert.date)}</p><div class="web-only">${cert.id ? `<p>ID: ${escape(cert.id)}</p>` : ''}${external(cert.url, 'Verificar')}</div></article>`).join('')));
 const contact = profile.contact;
+const person = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, description: profile.headline, email: contact.email, url: contact.website, address: { '@type': 'PostalAddress', addressLocality: contact.city }, sameAs: [contact.linkedin, contact.github], ...(contact.phone.trim() ? { telephone: contact.phone } : {}) };
+html = html.replace('</head>', `<link rel="canonical" href="${escape(contact.website)}"><meta property="og:title" content="${escape(profile.name + ' | ' + profile.headline)}"><meta property="og:description" content="${escape(profile.summary)}"><meta property="og:url" content="${escape(contact.website)}"><meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><script type="application/ld+json">${JSON.stringify(person).replaceAll('<', '\\u003c')}</script></head>`);
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
   ...(contact.phone.trim() ? [['phone', `tel:${contact.phone.replace(/[^+\d]/g, '')}`, contact.phone]] : []),
