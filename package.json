@@ -6,5 +6,10 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs",
     "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.6.0",
+    "pdfjs-dist": "^6.5.438",
+    "playwright": "^1.64.1"
   }
 }
