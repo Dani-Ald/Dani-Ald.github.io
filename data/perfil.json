@@ -14,9 +14,9 @@
     { "name": "Instructor de IA e Infraestructura TI · Servicio social", "date": "May 2026 – Ago 2026 · Telesecundaria 594, El Boxtha, Actopan", "bullets": ["Instalé y configuré equipos del laboratorio escolar y realicé mantenimiento preventivo.", "Impartí talleres de IA para docentes y gestioné el inventario tecnológico."] }
   ],
   "projects": [
-    { "name": "Smart-Ticket", "date": "Jul 2026 – Actualidad", "url": "https://github.com/Dani-Ald/Smart-locker-", "bullets": ["Desarrollé una app offline-first con React Native, Expo y TypeScript, con boletos en SQLite y códigos QR firmados con Ed25519.", "Implementé una API con Node.js, Express y MongoDB para eventos y control de acceso."] },
+    { "name": "Smart-Ticket", "date": "Jul 2026 – Actualidad", "url": "https://github.com/Dani-Ald/Smart-locker-", "bullets": ["Desarrollo una app offline-first con React Native, Expo y TypeScript, con boletos en SQLite y códigos QR firmados con Ed25519.", "Implemento una API con Node.js, Express y MongoDB para eventos y control de acceso."] },
     { "name": "VetSense", "date": "2026", "url": "", "bullets": ["Implementé telemetría para monitoreo posquirúrgico de ganado con ESP32, LoRa (Heltec V3) y el sensor ECG AD8232.", "Desarrollé una interfaz web para consultar datos de supervisión veterinaria."] },
-    { "name": "RB-DANI", "date": "Ago 2023 – Actualidad", "url": "https://github.com/Dani-Ald/RB-DANI-", "bullets": ["Desarrollé un vehículo en C++ sobre ESP32/ESP8266 con servomotores y control Bluetooth mediante Bluepad32.", "Documenté análisis de rendimiento en cuadernos Jupyter."] }
+    { "name": "RB-DANI", "date": "Ago 2023 – Actualidad", "url": "https://github.com/Dani-Ald/RB-DANI-", "bullets": ["Desarrollo un vehículo en C++ sobre ESP32/ESP8266 con servomotores y control Bluetooth mediante Bluepad32.", "Documento análisis de rendimiento en cuadernos Jupyter."] }
   ],
   "name": "Daniel Aldana López",
   "headline": "Desarrollador de Software Jr. · Mobile & Backend",
