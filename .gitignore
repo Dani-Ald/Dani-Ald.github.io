@@ -1,2 +1,4 @@
 node_modules/
 artifacts/
+# Respaldo del retrato original (pesa >1 MB); el sitio usa assets/img/foto-perfil.*
+archivo/Retrato ejecutivo en traje azul marino.png

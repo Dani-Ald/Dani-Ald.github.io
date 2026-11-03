@@ -49,6 +49,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   flex-direction: column;
   gap: 26px;
 }
+.profile-photo {
+  display: block;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 1px solid #CBD2D9;
+  margin-bottom: 18px;
+}
 .sidebar h1 {
   color: #ffffff;
   font-size: 27px;
@@ -185,6 +195,7 @@ footer {
   .sidebar { padding: 26px 20px 24px; gap: 20px; }
   .column-main { padding: 26px 20px 24px; }
   .sidebar h1 { font-size: 24px; }
+  .profile-photo { width: 96px; height: 96px; margin-bottom: 14px; }
   .download { margin-left: 0; width: 100%; text-align: center; }
   nav a { font-size: 14px; }
 }
@@ -198,7 +209,27 @@ footer {
   .page { display: flex; flex-direction: column; border: 0; max-width: none; }
   .sidebar, .column-main { display: contents; }
 
-  .sidebar > header { order: 1; }
+  .profile-photo {
+    width: 88px;
+    height: 88px;
+    margin: 0;
+    border: 1px solid #CBD2D9;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  body.hide-photo-pdf .profile-photo { display: none !important; }
+  .sidebar > header {
+    order: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10pt;
+    align-items: center;
+  }
+  .sidebar > header picture { grid-row: 1 / span 3; grid-column: 1; align-self: center; display: block; }
+  .sidebar > header h1, .sidebar > header .headline, .sidebar > header .location { grid-column: 2; }
   #resumen { order: 2; }
   #contacto { order: 3; }
   #proyectos { order: 4; }
