@@ -1,5 +1,9 @@
 {
   "summary": "Estudiante de 7.º semestre de Ingeniería en TIC (ITSOEH). Desarrollo apps móviles con React Native y TypeScript, APIs en Node.js y firmware en C++ para ESP32. Busco una plaza en Modelo Dual como desarrollador de software Jr.",
+  "education": [
+    "Ingeniería en TIC · Instituto Tecnológico Superior del Occidente del Estado de Hidalgo (ITSOEH). 7.º semestre, en curso.",
+    "Google Project Management · Coursera. Cursos completados: Foundations of Project Management, Project Initiation y Agile Project Management."
+  ],
   "experience": [
     { "name": "Instructor de IA e Infraestructura TI · Servicio social", "date": "May 2026 – Ago 2026 · Telesecundaria 594, El Boxtha, Actopan", "bullets": ["Instalé y configuré equipos del laboratorio escolar y realicé mantenimiento preventivo.", "Impartí talleres de IA para docentes y gestioné el inventario tecnológico."] },
     { "name": "Oppo · QA y pruebas de dispositivos móviles", "date": "Jun 2025", "bullets": [] }
