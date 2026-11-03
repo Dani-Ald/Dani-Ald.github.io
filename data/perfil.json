@@ -1,5 +1,10 @@
 {
   "summary": "Estudiante de 7.º semestre de Ingeniería en TIC (ITSOEH). Desarrollo apps móviles con React Native y TypeScript, APIs en Node.js y firmware en C++ para ESP32. Busco una plaza en Modelo Dual como desarrollador de software Jr.",
+  "skills": {
+    "Uso frecuente": [],
+    "Con proyectos": ["React Native, Expo, TypeScript", "Node.js, Express, MongoDB, SQLite", "C++, ESP32/ESP8266, LoRa, Bluepad32"],
+    "Conocimiento básico": []
+  },
   "education": [
     "Ingeniería en TIC · Instituto Tecnológico Superior del Occidente del Estado de Hidalgo (ITSOEH). 7.º semestre, en curso.",
     "Google Project Management · Coursera. Cursos completados: Foundations of Project Management, Project Initiation y Agile Project Management."
