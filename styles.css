@@ -210,8 +210,8 @@ footer {
   .sidebar, .column-main { display: contents; }
 
   .profile-photo {
-    width: 88px;
-    height: 88px;
+    width: 76px;
+    height: 76px;
     margin: 0;
     border: 1px solid #CBD2D9;
     border-radius: 50%;
@@ -237,7 +237,8 @@ footer {
   #educacion { order: 6; }
   #certificaciones { order: 7; }
   #habilidades { order: 8; }
-  #reconocimientos { order: 9; }
+  #idiomas { order: 9; }
+  #reconocimientos { order: 10; }
 
   .sidebar section, .column-main section { padding: 0; margin: 0 0 1pt; }
   .sidebar, .column-main, .sidebar section, .column-main section, .sidebar > header { background: none !important; color: #1F2933 !important; }

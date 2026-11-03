@@ -17,7 +17,7 @@ try {
   assert.equal(pdf.numPages, 1, 'El PDF debe tener una página');
   let text = texts.join(' ').replace(/\s+/g, ' ');
   const compact = text.replace(/\s+/g, '');
-  const headings = ['Daniel Aldana López', 'PERFIL PROFESIONAL', 'PROYECTOS', 'EXPERIENCIA', 'EDUCACIÓN', 'CERTIFICACIONES', 'HABILIDADES', 'RECONOCIMIENTOS'];
+  const headings = ['Daniel Aldana López', 'PERFIL PROFESIONAL', 'PROYECTOS', 'EXPERIENCIA', 'EDUCACIÓN', 'CERTIFICACIONES', 'HABILIDADES', 'IDIOMAS', 'RECONOCIMIENTOS'];
   let cursor = -1;
   for (const heading of headings) { const pos = compact.indexOf(heading.replace(/\s+/g, ''), cursor + 1); assert(pos > cursor, `Orden de ${heading}`); cursor = pos; }
   assert(text.includes('Mobile & Backend'));

@@ -21,7 +21,7 @@ const section = (id, title, content) => `<section id="${id}"><h2>${title}</h2>${
 const external = (url, label) => url ? `<a href="${escape(url)}">${escape(label)}${icon('external')}</a>` : '';
 const entries = items => items.map(item => `<article><h3>${escape(item.name)}</h3><p class="meta">${escape(item.date)}</p>${item.bullets ? `<ul>${item.bullets.map(b => `<li>${escape(b)}</li>`).join('')}</ul>` : ''}${item.url ? `<p class="project-url">${external(item.url, item.url.replace('https://', ''))}</p>` : ''}</article>`).join('');
 
-const person = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, description: profile.headline, email: contact.email, url: contact.website, image: 'https://dani-ald.github.io/assets/img/foto-perfil.webp', address: { '@type': 'PostalAddress', addressLocality: contact.city }, sameAs: [contact.linkedin, contact.github], ...(phoneNational ? { telephone: phoneIntl } : {}) };
+const person = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, description: profile.headline, email: contact.email, url: contact.website, image: 'https://dani-ald.github.io/assets/img/foto-perfil.webp', address: { '@type': 'PostalAddress', addressLocality: contact.city }, sameAs: [contact.linkedin, contact.github], knowsLanguage: ['es', 'en'], ...(phoneNational ? { telephone: phoneIntl } : {}) };
 html = html.replace('</head>', `<link rel="canonical" href="${escape(contact.website)}"><meta property="og:title" content="${escape(profile.name + ' | ' + profile.headline)}"><meta property="og:description" content="${escape(profile.summary)}"><meta property="og:url" content="${escape(contact.website)}"><meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><meta property="og:image" content="https://dani-ald.github.io/assets/img/foto-perfil.webp"><meta property="og:image:width" content="480"><meta property="og:image:height" content="480"><script type="application/ld+json">${JSON.stringify(person).replaceAll('<', '\\u003c')}</script></head>`);
 html = html.replace('<body>', `<body class="${SHOW_PHOTO_IN_PDF ? 'show-photo-pdf' : 'hide-photo-pdf'}">`);
 
@@ -37,7 +37,8 @@ const contactHtml = `<div class="contact">${links.map(([symbol, href, label]) =>
 const sidebar = [
   section('resumen', 'Perfil profesional', `<p>${escape(profile.summary)}</p>`),
   section('contacto', 'Contacto', contactHtml),
-  section('habilidades', 'Habilidades', `<div class="skills">${Object.entries(profile.skills).flatMap(([level, rows]) => rows.map(row => `<p><strong>${escape(level)}</strong>${escape(row)}</p>`)).join('')}</div>`)
+  section('habilidades', 'Habilidades', `<div class="skills">${Object.entries(profile.skills).flatMap(([level, rows]) => rows.map(row => `<p><strong>${escape(level)}</strong>${escape(row)}</p>`)).join('')}</div>`),
+  section('idiomas', 'Idiomas', `<p>${escape(profile.languages)}</p>`)
 ];
 
 const mainSections = [
