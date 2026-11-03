@@ -1,5 +1,10 @@
 {
   "summary": "Estudiante de 7.º semestre de Ingeniería en TIC (ITSOEH). Desarrollo apps móviles con React Native y TypeScript, APIs en Node.js y firmware en C++ para ESP32. Busco una plaza en Modelo Dual como desarrollador de software Jr.",
+  "projects": [
+    { "name": "Smart-Ticket", "date": "Jul 2026 – Actualidad", "url": "https://github.com/Dani-Ald/Smart-locker-", "bullets": ["Desarrollé una app offline-first con React Native, Expo y TypeScript, con boletos en SQLite y códigos QR firmados con Ed25519.", "Implementé una API con Node.js, Express y MongoDB para eventos y control de acceso."] },
+    { "name": "VetSense", "date": "2026", "url": "", "bullets": ["Implementé telemetría para monitoreo posquirúrgico de ganado con ESP32, LoRa (Heltec V3) y el sensor ECG AD8232.", "Desarrollé una interfaz web para consultar datos de supervisión veterinaria."] },
+    { "name": "RB-DANI", "date": "Ago 2023 – Actualidad", "url": "https://github.com/Dani-Ald/RB-DANI-", "bullets": ["Desarrollé un vehículo en C++ sobre ESP32/ESP8266 con servomotores y control Bluetooth mediante Bluepad32.", "Documenté análisis de rendimiento en cuadernos Jupyter."] }
+  ],
   "name": "Daniel Aldana López",
   "headline": "Desarrollador de Software Jr. · Mobile & Backend",
   "contact": {
