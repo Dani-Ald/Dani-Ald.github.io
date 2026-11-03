@@ -5,9 +5,9 @@ Rama: `mejora-cv`. Veinte commits, uno por paso del plan.
 ## PDF
 
 - Archivo: `cv/Daniel-Aldana-Lopez-CV.pdf`.
-- Chromium, papel Carta, márgenes 10mm verticales y 13mm horizontales.
-- Una página; cuerpo de 10pt, interlineado 1.35 y una columna.
-- Texto extraído con PDF.js: encabezado, Resumen, Proyectos, Experiencia, Educación, Certificaciones, Habilidades, Reconocimientos.
+- Chromium, papel Carta, márgenes 6mm verticales y 11mm horizontales.
+- Una página; cuerpo de 8.5pt e interlineado 1.2 y una columna. La pantalla usa diseño de dos columnas con barra lateral oscura; la impresión se compacta en una sola columna con la sección de habilidades reordenada detrás de certificaciones.
+- Texto extraído con PDF.js: nombre, PERFIL PROFESIONAL, PROYECTOS, EXPERIENCIA, EDUCACIÓN, CERTIFICACIONES, HABILIDADES, RECONOCIMIENTOS, en orden.
 - Nombre, titular, correo y URLs de contacto presentes en el texto del PDF.
 - Cinco certificaciones y tres reconocimientos en impresión; inventario completo en pantalla.
 

@@ -15,10 +15,11 @@ try {
   writeFileSync('artifacts/pdf-text.txt', texts.join('\n\n'));
   console.log('PDF pages:', pdf.numPages);
   assert.equal(pdf.numPages, 1, 'El PDF debe tener una página');
-  const text = texts.join(' ');
-  const headings = ['Daniel Aldana López', 'RESUMEN', 'PROYECTOS', 'EXPERIENCIA', 'EDUCACIÓN', 'CERTIFICACIONES', 'HABILIDADES', 'RECONOCIMIENTOS'];
+  let text = texts.join(' ').replace(/\s+/g, ' ');
+  const compact = text.replace(/\s+/g, '');
+  const headings = ['Daniel Aldana López', 'PERFIL PROFESIONAL', 'PROYECTOS', 'EXPERIENCIA', 'EDUCACIÓN', 'CERTIFICACIONES', 'HABILIDADES', 'RECONOCIMIENTOS'];
   let cursor = -1;
-  for (const heading of headings) { const pos = text.indexOf(heading, cursor + 1); assert(pos > cursor, `Orden de ${heading}`); cursor = pos; }
+  for (const heading of headings) { const pos = compact.indexOf(heading.replace(/\s+/g, ''), cursor + 1); assert(pos > cursor, `Orden de ${heading}`); cursor = pos; }
   assert(text.includes('Mobile & Backend'));
   assert(text.includes('ll.daniel.l.aldana.ll@gmail.com'));
   await page.emulateMedia({ media: 'print' });

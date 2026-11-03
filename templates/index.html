@@ -16,15 +16,19 @@
     <a href="#reconocimientos">Reconocimientos</a>
     <a class="download" href="cv/Daniel-Aldana-Lopez-CV.pdf" download>Descargar CV (PDF)</a>
   </nav>
-  <header>
-    <h1>{{NAME}}</h1>
-    <p class="headline">{{HEADLINE}}</p>
-    <p class="location">{{CITY}}</p>
-    <div class="contact">{{CONTACT}}</div>
-  </header>
-  <main id="contenido">
-    {{CONTENT}}
-  </main>
+  <div class="page">
+    <aside class="sidebar">
+      <header>
+        <h1>{{NAME}}</h1>
+        <p class="headline">{{HEADLINE}}</p>
+        <p class="location">{{CITY}}</p>
+      </header>
+      {{SIDEBAR}}
+    </aside>
+    <main id="contenido" class="column-main">
+      {{MAIN}}
+    </main>
+  </div>
   <footer class="web-only">Daniel Aldana López · Portafolio y CV</footer>
 </body>
 </html>
