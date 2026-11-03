@@ -200,14 +200,16 @@ a:hover { text-decoration: underline; opacity: 0.85; }
 
 /* ── Hero Section ─────────────────────────────────────────── */
 .hero {
-  background: var(--gradient-hero);
-  padding: 7rem 2rem 5rem;
+  background: #fff;
+  color: #1F2933;
+  padding: 7rem 2rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .hero::before {
+  display: none;
   content: '';
   position: absolute;
   inset: 0;
@@ -235,7 +237,7 @@ a:hover { text-decoration: underline; opacity: 0.85; }
 .hero-name {
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
-  color: #fff;
+  color: #1F3A5F;
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin-bottom: 0.5rem;
@@ -243,7 +245,7 @@ a:hover { text-decoration: underline; opacity: 0.85; }
 
 .hero-title {
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: rgba(255,255,255,0.80);
+  color: #1F2933;
   font-weight: 400;
   margin-bottom: 0.6rem;
   max-width: 680px;
@@ -252,12 +254,29 @@ a:hover { text-decoration: underline; opacity: 0.85; }
 
 .hero-location {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.60);
+  color: #1F2933;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+}
+
+.hero-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+  max-width: 900px;
+  margin-inline: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hero-contact a {
+  color: #1F3A5F;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
 }
 
 .hero-links {
@@ -962,9 +981,10 @@ a:hover { text-decoration: underline; opacity: 0.85; }
     padding: 0 0 1rem 0 !important;
     border-bottom: 2px solid #1a56db;
   }
-  .hero-name { color: #0f172a !important; font-size: 22pt !important; }
-  .hero-title { color: #334155 !important; font-size: 10pt !important; }
-  .hero-location { color: #64748b !important; }
+   .hero-name { font-size: 22pt !important; }
+   .hero-title { font-size: 10pt !important; }
+   .hero-contact { font-size: 10pt; }
+   .hero, .hero-contact { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
   .hero-avatar { display: none !important; }
   .hero-link-btn { border: 1px solid #cbd5e1 !important; color: #1a56db !important; background: #fff !important; padding: 0.2rem 0.7rem !important; font-size: 8pt !important; }
 
@@ -1005,4 +1025,3 @@ a:hover { text-decoration: underline; opacity: 0.85; }
     margin: 1.5cm 1.5cm 1.5cm 1.5cm;
   }
 }
-
