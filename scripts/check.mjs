@@ -12,7 +12,7 @@ const data = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
 if (!data.contact.phone.trim()) assert(!html.includes('tel:'));
 for (const match of html.matchAll(/href="([^"]+)"/g)) {
   const url = match[1].replaceAll('&amp;', '&');
-  if (!/^(https?:|mailto:|tel:|#)/.test(url)) assert(existsSync(decodeURIComponent(url.split('#')[0])), `Falta ${url}`);
+  if (!/^(https?:|mailto:|tel:|#)/.test(url)) assert(existsSync(decodeURIComponent(url.split(/[?#]/)[0])), `Falta ${url}`);
 }
 assert.equal(data.certifications.filter(c => c.featured).length, 5);
 assert.equal(data.awards.filter(c => c.featured).length, 3);

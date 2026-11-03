@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { icon } from './icons.mjs';
 
 const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
@@ -8,6 +9,8 @@ for (const award of profile.awards) {
 }
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 let html = readFileSync('templates/index.html', 'utf8');
+const styleVersion = createHash('sha256').update(readFileSync('styles.css')).digest('hex').slice(0, 12);
+html = html.replace('href="styles.css"', `href="styles.css?v=${styleVersion}"`);
 const sections = [];
 const section = (id, title, content) => `<section id="${id}"><h2>${title}</h2>${content}</section>`;
 sections.push(section('resumen', 'Resumen', `<p>${escape(profile.summary)}</p>`));

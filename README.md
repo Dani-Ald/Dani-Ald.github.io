@@ -16,6 +16,8 @@ Sitio estático para GitHub Pages. Una fuente de contenido produce el portafolio
 
 No editar `index.html` directamente: se regenera con `npm run build`.
 
+El generador añade al enlace de `styles.css` una versión calculada desde su contenido. Al cambiar estilos y regenerar el HTML, el navegador solicita la versión nueva en lugar de reutilizar una copia anterior en caché.
+
 ## Generar y validar
 
 1. `npm ci`
