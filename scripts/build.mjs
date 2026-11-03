@@ -24,5 +24,6 @@ const links = [
 html = html.replace('{{CONTACT}}', links.map(([symbol, href, label]) => `<a href="${escape(href)}">${icon(symbol)}${escape(label)}</a>`).join('\n'));
 html = html.replace('{{CITY}}', `${icon('pin')}${escape(contact.city)}`);
 html = html.replaceAll('{{NAME}}', escape(profile.name)).replaceAll('{{HEADLINE}}', escape(profile.headline)).replaceAll('{{CITY}}', escape(contact.city));
+sections.push(section('reconocimientos', 'Reconocimientos', profile.awards.map(award => `<article class="award ${award.featured ? '' : 'web-only'}"><h3>${escape(award.name)}</h3><p class="meta">${escape(award.date)}</p><div class="web-only"><p>${escape(award.organization)}. ${escape(award.detail)}</p>${external(award.url, 'Verificar')}</div></article>`).join('')));
 html = html.replace('{{CONTENT}}', sections.join('\n'));
 writeFileSync('index.html', html);
