@@ -10,6 +10,7 @@ sections.push(section('resumen', 'Resumen', `<p>${escape(profile.summary)}</p>`)
 const external = (url, label) => url ? `<a href="${escape(url)}">${escape(label)}${icon('external')}</a>` : '';
 const entries = items => items.map(item => `<article><h3>${escape(item.name)}</h3><p class="meta">${escape(item.date)}</p>${item.bullets ? `<ul>${item.bullets.map(b => `<li>${escape(b)}</li>`).join('')}</ul>` : ''}${item.url ? `<p class="project-url">${external(item.url, item.url.replace('https://', ''))}</p>` : ''}</article>`).join('');
 sections.push(section('proyectos', 'Proyectos', entries(profile.projects)));
+sections.push(section('experiencia', 'Experiencia', entries(profile.experience)));
 const contact = profile.contact;
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
