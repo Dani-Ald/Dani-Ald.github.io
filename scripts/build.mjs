@@ -4,7 +4,9 @@ import { icon } from './icons.mjs';
 const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 let html = readFileSync('templates/index.html', 'utf8');
-html = html.replace('{{CONTENT}}', '');
+const sections = [];
+const section = (id, title, content) => `<section id="${id}"><h2>${title}</h2>${content}</section>`;
+sections.push(section('resumen', 'Resumen', `<p>${escape(profile.summary)}</p>`));
 const contact = profile.contact;
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
@@ -16,4 +18,5 @@ const links = [
 html = html.replace('{{CONTACT}}', links.map(([symbol, href, label]) => `<a href="${escape(href)}">${icon(symbol)}${escape(label)}</a>`).join('\n'));
 html = html.replace('{{CITY}}', `${icon('pin')}${escape(contact.city)}`);
 html = html.replaceAll('{{NAME}}', escape(profile.name)).replaceAll('{{HEADLINE}}', escape(profile.headline)).replaceAll('{{CITY}}', escape(contact.city));
+html = html.replace('{{CONTENT}}', sections.join('\n'));
 writeFileSync('index.html', html);
