@@ -30,6 +30,20 @@ svg { vertical-align: -.2em; margin-right: 6px; flex-shrink: 0; }
 footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #D9DEE4; }
 .skip-link { position: absolute; left: -10000px; }
 .skip-link:focus { position: static; }
+@media screen {
+  nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .contact a { display: inline-block; padding: 4px 0; }
+  article .web-only > a { display: inline-block; padding: 10px 0; }
+  summary { cursor: pointer; padding: 12px 0; }
+}
+@media screen and (max-width: 480px) {
+  body { padding: 20px 16px; }
+  h1 { font-size: 28px; }
+  nav { gap: 4px 16px; }
+  .contact { display: block; }
+  .contact a { display: block; }
+  details li { overflow-wrap: anywhere; }
+}
 @media print {
   @page { size: Letter; margin: 10mm 13mm; }
   :root { --body-size: 10pt; --leading: 1.35; }
