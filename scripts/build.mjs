@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 let html = readFileSync('templates/index.html', 'utf8');
+html = html.replace('{{CONTENT}}', '');
 const contact = profile.contact;
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
