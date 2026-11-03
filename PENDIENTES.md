@@ -3,7 +3,6 @@
 - Teléfono: completar `contact.phone` en `data/perfil.json`; vacío se omite.
 - Correo: editar únicamente `contact.email` en `data/perfil.json` si decides cambiarlo.
 - VetSense: repositorio o demo, contribución individual y fecha final (HTML: May 2026; perfil anterior: Jul 2026).
-- Oppo: duración exacta, relación laboral o participación, tipo de pruebas y tareas realizadas. Solo consta Jun 2025 en el README anterior.
 - Google PM: confirmar si son 3 de 6 cursos completados.
 - Habilidades: clasificar cada tecnología en Uso frecuente / Con proyectos / Conocimiento básico antes de publicar niveles.
 - Smart-Ticket: [PENDIENTE: métrica] boletos, pruebas offline o usuarios medidos.

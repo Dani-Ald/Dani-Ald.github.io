@@ -61,7 +61,6 @@ Estudiante de 7.° semestre de **Ingeniería en TIC (ITSOEH)**, especializado en
 | Rol | Organización | Período |
 |-----|-------------|---------|
 | **Instructor de IA e Infraestructura TI** (Servicio Social) | Telesecundaria 594, El Boxtha · Actopan, Hgo. | May 2026 – Ago 2026 |
-| **QA & Mobile Device Testing** | Oppo | Jun 2025 |
 
 ---
 

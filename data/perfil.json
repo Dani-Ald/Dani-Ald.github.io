@@ -10,8 +10,7 @@
     "Google Project Management · Coursera. Cursos completados: Foundations of Project Management, Project Initiation y Agile Project Management."
   ],
   "experience": [
-    { "name": "Instructor de IA e Infraestructura TI · Servicio social", "date": "May 2026 – Ago 2026 · Telesecundaria 594, El Boxtha, Actopan", "bullets": ["Instalé y configuré equipos del laboratorio escolar y realicé mantenimiento preventivo.", "Impartí talleres de IA para docentes y gestioné el inventario tecnológico."] },
-    { "name": "Oppo · QA y pruebas de dispositivos móviles", "date": "Jun 2025", "bullets": [] }
+    { "name": "Instructor de IA e Infraestructura TI · Servicio social", "date": "May 2026 – Ago 2026 · Telesecundaria 594, El Boxtha, Actopan", "bullets": ["Instalé y configuré equipos del laboratorio escolar y realicé mantenimiento preventivo.", "Impartí talleres de IA para docentes y gestioné el inventario tecnológico."] }
   ],
   "projects": [
     { "name": "Smart-Ticket", "date": "Jul 2026 – Actualidad", "url": "https://github.com/Dani-Ald/Smart-locker-", "bullets": ["Desarrollé una app offline-first con React Native, Expo y TypeScript, con boletos en SQLite y códigos QR firmados con Ed25519.", "Implementé una API con Node.js, Express y MongoDB para eventos y control de acceso."] },

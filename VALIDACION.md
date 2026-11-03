@@ -34,4 +34,4 @@ Los informes completos y el texto extraído están en `artifacts/`, excluido del
 
 ## Confirmaciones editoriales pendientes
 
-Consultar `PENDIENTES.md`. Los niveles de uso frecuente y conocimiento básico permanecen vacíos: actualmente se publican tres líneas de tecnologías con proyectos documentados. Google PM enumera los tres cursos registrados; la fracción 3 de 6 espera confirmación. VetSense muestra el año común a ambas fuentes y omite la constancia cuyo enlace está en conflicto. Oppo conserva únicamente rol y mes documentados.
+Consultar `PENDIENTES.md`. Los niveles de uso frecuente y conocimiento básico permanecen vacíos: actualmente se publican tres líneas de tecnologías con proyectos documentados. Google PM enumera los tres cursos registrados; la fracción 3 de 6 espera confirmación. VetSense muestra el año común a ambas fuentes y omite la constancia cuyo enlace está en conflicto.
