@@ -15,17 +15,19 @@ const styleVersion = createHash('sha256').update(readFileSync('styles.css')).dig
 html = html.replace('href="styles.css"', `href="styles.css?v=${styleVersion}"`);
 
 const contact = profile.contact;
+const phoneNational = contact.phone.replace(/\D/g, '');
+const phoneIntl = contact.phone.trim().startsWith('+') ? `+${phoneNational}` : `+52${phoneNational}`;
 const section = (id, title, content) => `<section id="${id}"><h2>${title}</h2>${content}</section>`;
 const external = (url, label) => url ? `<a href="${escape(url)}">${escape(label)}${icon('external')}</a>` : '';
 const entries = items => items.map(item => `<article><h3>${escape(item.name)}</h3><p class="meta">${escape(item.date)}</p>${item.bullets ? `<ul>${item.bullets.map(b => `<li>${escape(b)}</li>`).join('')}</ul>` : ''}${item.url ? `<p class="project-url">${external(item.url, item.url.replace('https://', ''))}</p>` : ''}</article>`).join('');
 
-const person = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, description: profile.headline, email: contact.email, url: contact.website, image: 'https://dani-ald.github.io/assets/img/foto-perfil.webp', address: { '@type': 'PostalAddress', addressLocality: contact.city }, sameAs: [contact.linkedin, contact.github], ...(contact.phone.trim() ? { telephone: contact.phone } : {}) };
+const person = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, description: profile.headline, email: contact.email, url: contact.website, image: 'https://dani-ald.github.io/assets/img/foto-perfil.webp', address: { '@type': 'PostalAddress', addressLocality: contact.city }, sameAs: [contact.linkedin, contact.github], ...(phoneNational ? { telephone: phoneIntl } : {}) };
 html = html.replace('</head>', `<link rel="canonical" href="${escape(contact.website)}"><meta property="og:title" content="${escape(profile.name + ' | ' + profile.headline)}"><meta property="og:description" content="${escape(profile.summary)}"><meta property="og:url" content="${escape(contact.website)}"><meta property="og:type" content="website"><meta property="og:locale" content="es_MX"><meta property="og:image" content="https://dani-ald.github.io/assets/img/foto-perfil.webp"><meta property="og:image:width" content="480"><meta property="og:image:height" content="480"><script type="application/ld+json">${JSON.stringify(person).replaceAll('<', '\\u003c')}</script></head>`);
 html = html.replace('<body>', `<body class="${SHOW_PHOTO_IN_PDF ? 'show-photo-pdf' : 'hide-photo-pdf'}">`);
 
 const links = [
   ['mail', `mailto:${contact.email}`, contact.email],
-  ...(contact.phone.trim() ? [['phone', `tel:${contact.phone.replace(/[^+\d]/g, '')}`, contact.phone]] : []),
+  ...(phoneNational ? [['phone', `tel:${phoneIntl}`, contact.phone]] : []),
   ['linkedin', contact.linkedin, contact.linkedin.replace('https://www.', '')],
   ['github', contact.github, contact.github.replace('https://', '')],
   ['globe', contact.website, contact.website.replace('https://', '').replace(/\/$/, '')]

@@ -27,7 +27,7 @@ Medido sobre `http://127.0.0.1:4173/`. Los resultados de GitHub Pages pueden var
 - Lista de expresiones prohibidas: cero coincidencias en el HTML generado.
 - SVG: todos inline, sin relleno, `stroke="currentColor"` y grosor 1.5.
 - Enlaces locales existentes; un solo h1; sin marcadores de pendientes en producción.
-- Teléfono vacío: no aparece enlace `tel:` ni entrada en JSON-LD.
+- Teléfono: enlace `tel:+525554996118` en la web y `telephone` en JSON-LD; el PDF lo muestra como texto (`55 5499 6118`).
 - Contraste sobre blanco: texto 14.76:1, secundario 6.46:1, enlaces 11.48:1; cumplen AA.
 
 Los informes completos y el texto extraído están en `artifacts/`, excluido del repositorio. Los comandos para regenerarlos están en `README.md`.
