@@ -1,0 +1,16 @@
+import { readFileSync, writeFileSync } from 'node:fs';
+
+const profile = JSON.parse(readFileSync('data/perfil.json', 'utf8'));
+const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+let html = readFileSync('templates/index.html', 'utf8');
+const contact = profile.contact;
+const links = [
+  ['mail', `mailto:${contact.email}`, contact.email],
+  ...(contact.phone.trim() ? [['phone', `tel:${contact.phone.replace(/[^+\d]/g, '')}`, contact.phone]] : []),
+  ['linkedin', contact.linkedin, contact.linkedin.replace('https://www.', '')],
+  ['github', contact.github, contact.github.replace('https://', '')],
+  ['globe', contact.website, contact.website.replace('https://', '').replace(/\/$/, '')]
+];
+html = html.replace('{{CONTACT}}', links.map(([icon, href, label]) => `<a href="${escape(href)}">${escape(label)}</a>`).join('\n'));
+html = html.replaceAll('{{NAME}}', escape(profile.name)).replaceAll('{{HEADLINE}}', escape(profile.headline)).replaceAll('{{CITY}}', escape(contact.city));
+writeFileSync('index.html', html);

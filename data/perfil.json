@@ -1,0 +1,226 @@
+{
+  "name": "Daniel Aldana López",
+  "headline": "Desarrollador de Software Jr. · Mobile & Backend",
+  "contact": {
+    "email": "ll.daniel.l.aldana.ll@gmail.com",
+    "phone": "",
+    "city": "Actopan, Hidalgo, México",
+    "linkedin": "https://www.linkedin.com/in/daniel-aldana-lopez",
+    "github": "https://github.com/Dani-Ald",
+    "website": "https://dani-ald.github.io/"
+  },
+  "certifications": [
+    {
+      "name": "Agile with Atlassian Jira",
+      "issuer": "Atlassian University",
+      "date": "Nov 2026",
+      "id": "FUS94DSBO3Q3",
+      "url": "https://coursera.org/verify/FUS94DSBO3Q3",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera FUS94DSBO3Q3 (1).pdf"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Project Initiation: Starting a Successful Project",
+      "issuer": "Google",
+      "date": "Ago 2026",
+      "id": "73682GG71FBF",
+      "url": "https://coursera.org/verify/73682GG71FBF",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera 73682GG71FBF.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Foundations of Project Management",
+      "issuer": "Google",
+      "date": "Jul 2026",
+      "id": "L0KC3EOV3G3H",
+      "url": "https://coursera.org/verify/L0KC3EOV3G3H",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera L0KC3EOV3G3H.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Liderazgo y Comunicación",
+      "issuer": "Universidad de Palermo",
+      "date": "Jul 2026",
+      "id": "J3YLYQXIEJU7",
+      "url": "https://coursera.org/verify/J3YLYQXIEJU7",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera J3YLYQXIEJU7.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Agile Project Management",
+      "issuer": "Google",
+      "date": "Jun 2026",
+      "id": "7QM55R13N90K",
+      "url": "https://coursera.org/verify/7QM55R13N90K",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera 7QM55R13N90K.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Python Programming Fundamentals",
+      "issuer": "Microsoft",
+      "date": "Oct 2026",
+      "id": "XW26W00EVCYJ",
+      "url": "https://coursera.org/verify/XW26W00EVCYJ",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera XW26W00EVCYJ.pdf"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Introduction to HTML5",
+      "issuer": "University of Michigan",
+      "date": "Oct 2026",
+      "id": "5XC1ST6XHNDC",
+      "url": "https://coursera.org/verify/5XC1ST6XHNDC",
+      "documents": [
+        "./Certificados/Nueva carpeta/Coursera 5XC1ST6XHNDC.pdf"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Curso de Iniciación al Desarrollo con IA",
+      "issuer": "MoureDev & BIG school",
+      "date": "Oct 2026",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/Certificado-Daniel-Aldana-Lopez-k1dzbgxy_copia.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/Certificado-Daniel-Aldana-Lopez-k1dzbgxy_copia.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "AI Fluency: AI Capabilities & Limitations",
+      "issuer": "Anthropic",
+      "date": "2026",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/_certificate_ll-daniel-l-aldana-ll-gmail-com_665f38e7-4b36-4981-aa2c-6f1e8653a6e3.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/_certificate_ll-daniel-l-aldana-ll-gmail-com_665f38e7-4b36-4981-aa2c-6f1e8653a6e3.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Industrial IoT and Control Systems in Manufacturing",
+      "issuer": "Cisco Networking Academy",
+      "date": "Oct 2026",
+      "id": "",
+      "url": "https://www.credly.com/badges/66c47cd8-aff2-48ee-823f-b6fc47a9e3e1",
+      "documents": [
+        "./Certificados/Nueva carpeta/Industrial_IoT_and_Control_Systems_in_Manufacturing_certificate_230110150-itsoeh-edu-mx_938e7c7e-e41b-4e17-88b3-4e370e157fee.pdf"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Industrial IoT and Control Systems in Energy",
+      "issuer": "Cisco Networking Academy",
+      "date": "Sep 2026",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/Industrial_IoT_and_Control_Systems_in_Energy_certificate_230110150-itsoeh-edu-mx_882b0146-6486-4702-973e-aa433fecb023.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/Industrial_IoT_and_Control_Systems_in_Energy_certificate_230110150-itsoeh-edu-mx_882b0146-6486-4702-973e-aa433fecb023.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "CCNA: Enterprise Networking, Security & Automation",
+      "issuer": "Cisco Networking Academy (ITSOEH)",
+      "date": "Jul 2026",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/CCNA-_Enterprise_Networking-_Security-_and_Automation_certificate_230110150-itsoeh-edu-mx_2dd9ef1e-daa2-47e2-a9f1-af19eca728af.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/CCNA-_Enterprise_Networking-_Security-_and_Automation_certificate_230110150-itsoeh-edu-mx_2dd9ef1e-daa2-47e2-a9f1-af19eca728af.pdf"
+      ],
+      "featured": true
+    },
+    {
+      "name": "CCNA: Switching, Routing & Wireless Essentials",
+      "issuer": "Cisco Networking Academy (ITSOEH)",
+      "date": "Nov 2025",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_ll-daniel-l-aldana-ll-gmail-com_c7edf9bb-0949-4383-9b92-a158a63f3d5e.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/CCNA-_Switching-_Routing-_and_Wireless_Essentials_certificate_ll-daniel-l-aldana-ll-gmail-com_c7edf9bb-0949-4383-9b92-a158a63f3d5e.pdf"
+      ],
+      "featured": false
+    },
+    {
+      "name": "CCNA: Introduction to Networks",
+      "issuer": "Cisco Networking Academy (ITSOEH)",
+      "date": "May 2025",
+      "id": "",
+      "url": "./Certificados/Nueva carpeta/l.pdf",
+      "documents": [
+        "./Certificados/Nueva carpeta/l.pdf"
+      ],
+      "featured": false
+    }
+  ],
+  "awards": [
+    {
+      "name": "VetSense — participación en Innova TecNM 2026, etapa local",
+      "organization": "Cumbre Nacional Innova TecNM 2026 · Etapa Local",
+      "date": "Mayo 2026",
+      "detail": "Participación destacada en el Certamen de Proyectos de Desarrollo Tecnológico, Emprendimiento e Innovación.",
+      "url": "",
+      "featured": true
+    },
+    {
+      "name": "2.° Lugar — Categoría Innovación (Team ITSMEX)",
+      "organization": "Rally Latinoamericano de Innovación 2025",
+      "date": "Octubre 2025",
+      "detail": "Segundo lugar a nivel sede en competencia internacional simultánea en 9 países de Latinoamérica.",
+      "url": "./Certificados/Participaciones/certificado_sede_innovacion_80077.pdf",
+      "featured": true
+    },
+    {
+      "name": "Concursante Nacional de Programación — Coding Cup TecNM 2025 (Equipo ITSOEH-TICS-IoT-2)",
+      "organization": "Tecnológico Nacional de México / ITS del Sur de Guanajuato",
+      "date": "Septiembre 2025",
+      "detail": "Representante institucional del ITSOEH en programación competitiva a nivel nacional.",
+      "url": "./Certificados/Participaciones/DaniTECNM-DIR-2133-2025.pdf",
+      "featured": true
+    },
+    {
+      "name": "Participante Destacado — 2do. Rally Programming Challenges ITSOEH",
+      "organization": "División de Ingeniería en TICs — ITSOEH",
+      "date": "Abril 2024",
+      "detail": "Resolución de retos algorítmicos y programación competitiva institucional.",
+      "url": "./Certificados/Participaciones/2do Rally Itsoeh.pdf",
+      "featured": false
+    },
+    {
+      "name": "Reconocimiento por Exhibición de Prototipos Robóticos (DANI-TRUCK)",
+      "organization": "5ta Jornada Académica de Mecatrónica y Energías Renovables — UTVM",
+      "date": "Marzo 2024",
+      "detail": "Otorgado al equipo \"DANI-TRUCK ITSOEH\" por exhibición de prototipos de control remoto.",
+      "url": "./Certificados/Participaciones/Rally utvm.pdf",
+      "featured": false
+    },
+    {
+      "name": "3.er Lugar — Categoría Impacto Social (Team Good Water)",
+      "organization": "Rally Latinoamericano de Innovación 2023",
+      "date": "Octubre 2023",
+      "detail": "Tercer lugar a nivel sede en competencia internacional en 10 países de la región.",
+      "url": "./Certificados/Participaciones/certificado_sede_impacto_social_47483.pdf",
+      "featured": false
+    },
+    {
+      "name": "Concursante Nacional de Programación — Coding Cup TecNM 2023 (Equipo Lobos TICS)",
+      "organization": "Tecnológico Nacional de México / ITS del Sur de Guanajuato",
+      "date": "Septiembre 2023",
+      "detail": "Representación institucional del ITSOEH en programación competitiva a nivel nacional.",
+      "url": "./Certificados/Participaciones/CONCURSANTE-DANIEL ALDANA LOPEZ-Lobos TICS.pdf",
+      "featured": false
+    }
+  ]
+}
